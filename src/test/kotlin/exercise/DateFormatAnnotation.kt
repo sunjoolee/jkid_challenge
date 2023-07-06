@@ -11,10 +11,10 @@ import kotlin.test.assertEquals
 
 data class Person(
         val name: String,
-        @DateFormat("dd-MM-yyyy") val birthDate: Date
+        @DateFormat("dd-MM-yyyy")
+        val birthDate: Date
 )
 
-@Ignore
 class DateFormatTest {
     private val value = Person("Alice", SimpleDateFormat("dd-MM-yyyy").parse("13-02-1987"))
     private val json = """{"birthDate": "13-02-1987", "name": "Alice"}"""

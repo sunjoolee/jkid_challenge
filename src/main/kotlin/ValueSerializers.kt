@@ -2,6 +2,9 @@ package ru.yole.jkid
 
 import ru.yole.jkid.deserialization.JKidException
 import java.lang.reflect.Type
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.util.*
 
 fun serializerForBasicType(type: Type): ValueSerializer<out Any?> {
     assert(type.isPrimitiveOrString()) { "Expected primitive type or String: ${type.typeName}" }

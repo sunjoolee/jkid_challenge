@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.yole.jkid.exercise.DateFormatTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-07-06T05:04:46" hostname="DESKTOP-DJTSP3U" time="0.514">
+  <properties/>
+  <testcase name="testSerialization" classname="ru.yole.jkid.exercise.DateFormatTest" time="0.482"/>
+  <testcase name="testDeserialization" classname="ru.yole.jkid.exercise.DateFormatTest" time="0.031"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

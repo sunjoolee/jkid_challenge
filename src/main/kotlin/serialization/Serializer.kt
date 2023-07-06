@@ -1,6 +1,7 @@
 package ru.yole.jkid.serialization
 
 import ru.yole.jkid.*
+import java.util.*
 import kotlin.reflect.KProperty
 import kotlin.reflect.KProperty1
 import kotlin.reflect.full.memberProperties
@@ -41,6 +42,11 @@ private fun StringBuilder.serializeProperty(
 }
 
 fun KProperty<*>.getSerializer(): ValueSerializer<Any?>? {
+    val dateFormatAnn = findAnnotation<DateFormat>()
+    if (dateFormatAnn != null) {
+        return DateSerializer(dateFormatAnn.format) as ValueSerializer<Any?>
+    }
+
     val customSerializerAnn = findAnnotation<CustomSerializer>() ?: return null
     val serializerClass = customSerializerAnn.serializerClass
 
